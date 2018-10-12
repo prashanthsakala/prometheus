@@ -1,0 +1,11 @@
+route:
+    receiver: 'slack'
+
+receivers:
+    - name: 'slack'
+      slack_configs:
+          - send_resolved: true
+            text: "{{ .CommonAnnotations.description }}"
+            username: 'Prashanth V'
+            channel: 'prometheus_alerts'
+            api_url: 'https://prashanthv.slack.com'
